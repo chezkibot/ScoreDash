@@ -1,0 +1,14 @@
+.inputForm{
+    display: grid;
+    justify-content: center !important;
+    align-items: center;
+    margin: auto;
+    text-align: center !important;
+}
+
+
+.inputError{
+    font-size: small;
+    color: rgb(179, 19, 19);
+}
+

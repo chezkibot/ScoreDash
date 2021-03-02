@@ -1,0 +1,48 @@
+import React, { useRef, useState } from "react";
+import { Form, Button,  Alert } from "react-bootstrap";
+import { useAuth } from "../contexts/AuthContext";
+
+export default function ForgotPassword() {
+  const emailRef = useRef();
+  const { resetPassword } = useAuth();
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    try {
+      setMessage("");
+      setError("");
+      setLoading(true);
+      await resetPassword(emailRef.current.value);
+      setMessage("Check your inbox for further instructions");
+    } catch {
+      setError("Failed to reset password");
+    }
+
+    setLoading(false);
+  }
+
+  return (
+    <>
+      <div className="w-100 text-center mt-2">
+        {error && <Alert variant="danger">{error}</Alert>}
+        {message && <Alert variant="success">{message}</Alert>}
+        <Form onSubmit={handleSubmit}>
+          <Form.Group id="email">
+            <Form.Label className="mb-3 mt-0">
+              Enter your email address and we'll send you a link to reset
+              password
+            </Form.Label>
+            <Form.Control type="email" ref={emailRef} required />
+          </Form.Group>
+          <Button disabled={loading} className="w-100" type="submit">
+            Reset Password
+          </Button>
+        </Form>
+      </div>
+    </>
+  );
+}

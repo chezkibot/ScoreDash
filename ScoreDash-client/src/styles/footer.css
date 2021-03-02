@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  /* position: absolute; */
+  bottom: 0;
+  /* margin: 2em 0 0 2em ; */
+  width: 100%;
+  /* background-color: black; */
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.footer-icon {
+  margin: 0.6rem;
+}
+
+.footer-icon:hover {
+  transform: scale(1.3);
+}
