@@ -9,4 +9,6 @@
 <p>Built with React.js, Bootstrap, Recharts, firebase auth, Node.js, Express and MongoDB </p>
 <img src='https://scoredashlive.herokuapp.com/static/media/mock-1.d83e15ec.png'>
 <img src='https://scoredashlive.herokuapp.com/static/media/mock-2.55371167.png'>
-<img src='https://scoredashlive.herokuapp.com/static/media/mock-3.5da0066a.png'>
+<p align="center">
+<img src='https://scoredashlive.herokuapp.com/static/media/mock-3.5da0066a.png' width='200' height='400'>
+</p>
